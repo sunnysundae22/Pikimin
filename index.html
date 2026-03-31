@@ -1,15 +1,14 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!-- saved from url=(0100)file:///Users/andie/Downloads/%E7%9A%AE%E5%8F%AF%E6%95%8F%E5%BA%A7%E6%A8%99%E6%B8%85%E5%96%AE_1.html -->
+<html lang="zh-TW"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>🌸 皮可敏座標清單</title>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { font-family: Arial, sans-serif; background: #f8f4ff; min-height: 100vh; padding: 16px; }
   h1 { text-align: center; font-size: 22px; color: #6b21a8; margin-bottom: 6px; }
   .subtitle { text-align: center; font-size: 13px; color: #a78bfa; margin-bottom: 20px; }
-
   .stats { display: flex; gap: 12px; justify-content: center; margin-bottom: 20px; flex-wrap: wrap; }
   .stat { background: white; border-radius: 12px; padding: 10px 20px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.07); }
   .stat .num { font-size: 22px; font-weight: bold; }
@@ -17,12 +16,10 @@
   .stat.mush .num { color: #b45309; }
   .stat.flower .num { color: #be185d; }
   .stat.total .num { color: #6b21a8; }
-
   .filter-bar { display: flex; gap: 8px; justify-content: center; margin-bottom: 16px; flex-wrap: wrap; }
   .filter-btn { border: none; border-radius: 20px; padding: 6px 16px; font-size: 13px; cursor: pointer; transition: all 0.2s; }
-  .filter-btn.active { color: white; }
   .filter-btn.all { background: #ede9fe; color: #6b21a8; }
-  .filter-btn.all.active { background: #6b21a8; }
+  .filter-btn.all.active { background: #6b21a8; color: white; }
   .filter-btn.mush { background: #fef3c7; color: #b45309; }
   .filter-btn.mush.active { background: #b45309; color: white; }
   .filter-btn.flower { background: #fce7f3; color: #be185d; }
@@ -31,18 +28,14 @@
   .filter-btn.done.active { background: #166534; color: white; }
   .filter-btn.undone { background: #fee2e2; color: #991b1b; }
   .filter-btn.undone.active { background: #991b1b; color: white; }
-
   .section-title { font-size: 15px; font-weight: bold; margin: 16px 0 8px; padding-left: 4px; }
   .section-title.mush { color: #b45309; }
   .section-title.flower { color: #be185d; }
-
-  .card { background: white; border-radius: 14px; padding: 14px 16px; margin-bottom: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); display: flex; align-items: flex-start; gap: 12px; transition: opacity 0.2s; cursor: pointer; }
+  .card { background: white; border-radius: 14px; padding: 14px 16px; margin-bottom: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); display: flex; align-items: flex-start; gap: 12px; cursor: pointer; }
   .card.done-card { filter: grayscale(1); opacity: 0.6; user-select: text; -webkit-user-select: text; }
   .card:hover { box-shadow: 0 4px 14px rgba(0,0,0,0.1); }
-
   .check { width: 24px; height: 24px; border-radius: 50%; border: 2px solid #d1d5db; flex-shrink: 0; display: flex; align-items: center; justify-content: center; margin-top: 2px; transition: all 0.2s; }
   .check.checked { background: #22c55e; border-color: #22c55e; color: white; font-size: 14px; }
-
   .info { flex: 1; }
   .name { font-size: 15px; font-weight: 600; color: #1f2937; margin-bottom: 4px; }
   .name.done-text { text-decoration: line-through; color: #9ca3af; }
@@ -50,23 +43,13 @@
   .tags { display: flex; gap: 6px; flex-wrap: wrap; }
   .tag { font-size: 11px; background: #f3f4f6; color: #6b7280; border-radius: 6px; padding: 2px 8px; }
   .tag.country { background: #ede9fe; color: #6b21a8; }
-
   .map-btn { background: #6366f1; color: white; border: none; border-radius: 8px; padding: 6px 12px; font-size: 12px; cursor: pointer; white-space: nowrap; flex-shrink: 0; text-decoration: none; display: inline-block; margin-top: 2px; }
   .map-btn:hover { background: #4f46e5; }
-
   .add-area { background: white; border-radius: 14px; padding: 16px; margin-top: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
   .add-area h3 { font-size: 15px; color: #6b21a8; margin-bottom: 12px; }
-  .add-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-  .add-grid input, .add-grid select { border: 1px solid #e5e7eb; border-radius: 8px; padding: 8px 10px; font-size: 14px; width: 100%; }
-  .add-grid label { font-size: 12px; color: #6b7280; display: block; margin-bottom: 4px; }
   .add-btn { margin-top: 12px; width: 100%; background: #6b21a8; color: white; border: none; border-radius: 10px; padding: 10px; font-size: 14px; font-weight: bold; cursor: pointer; }
   .add-btn:hover { background: #581c87; }
-
   .empty { text-align: center; padding: 40px; color: #d1d5db; font-size: 14px; }
-
-  @media (max-width: 480px) {
-    .add-grid { grid-template-columns: 1fr; }
-  }
 </style>
 </head>
 <body>
@@ -75,65 +58,1004 @@
 <p class="subtitle">點擊卡片標記完成 · 資料自動儲存</p>
 
 <div class="stats">
-  <div class="stat mush"><div class="num" id="stat-mush">0</div><div class="lbl">🍄 菇點</div></div>
-  <div class="stat flower"><div class="num" id="stat-flower">0</div><div class="lbl">🌹 花點</div></div>
+  <div class="stat mush"><div class="num" id="stat-mush">43</div><div class="lbl">🍄 菇點</div></div>
+  <div class="stat flower"><div class="num" id="stat-flower">42</div><div class="lbl">🌹 花點</div></div>
   <div class="stat total"><div class="num" id="stat-done">0</div><div class="lbl">✅ 已完成</div></div>
 </div>
 
 <div class="filter-bar">
-  <button class="filter-btn all active" onclick="setFilter('all')">全部</button>
-  <button class="filter-btn mush" onclick="setFilter('mush')">🍄 菇點</button>
-  <button class="filter-btn flower" onclick="setFilter('flower')">🌹 花點</button>
-  <button class="filter-btn undone" onclick="setFilter('undone')">未完成</button>
-  <button class="filter-btn done" onclick="setFilter('done')">已完成</button>
+  <button class="filter-btn all active" onclick="setFilter(&#39;all&#39;)">全部</button>
+  <button class="filter-btn mush" onclick="setFilter(&#39;mush&#39;)">🍄 菇點</button>
+  <button class="filter-btn flower" onclick="setFilter(&#39;flower&#39;)">🌹 花點</button>
+  <button class="filter-btn undone" onclick="setFilter(&#39;undone&#39;)">未完成</button>
+  <button class="filter-btn done" onclick="setFilter(&#39;done&#39;)">已完成</button>
 </div>
 
-<div id="list"></div>
+<div id="list"><div class="section-title mush">🍄 菇點（43）</div>
+    <div class="card " onclick="toggle(1)">
+      <div class="check "></div>
+      <div class="info">
+        <div class="name ">🍄 花夢里</div>
+        <div class="coord">34.641542, 132.922571</div>
+        <div class="tags"><span class="tag country">日本</span><span class="tag ">世羅町上津田</span></div>
+      </div>
+      <a href="https://maps.google.com/?q=34.641542,132.922571" target="_blank" onclick="event.stopPropagation()" class="map-btn">地圖</a>
+    </div>
+  
+    <div class="card " onclick="toggle(2)">
+      <div class="check "></div>
+      <div class="info">
+        <div class="name ">🍄 3/26 有盆</div>
+        <div class="coord">61.2195278, 14.5391389</div>
+        <div class="tags"><span class="tag country">瑞典</span><span class="tag ">藍莓</span><span class="tag ">雪</span></div>
+      </div>
+      <a href="https://maps.google.com/?q=61.2195278,14.5391389" target="_blank" onclick="event.stopPropagation()" class="map-btn">地圖</a>
+    </div>
+  
+    <div class="card " onclick="toggle(3)">
+      <div class="check "></div>
+      <div class="info">
+        <div class="name ">🍄 奈良美智</div>
+        <div class="coord">35.520872, 127.729226</div>
+        
+      </div>
+      <a href="https://maps.google.com/?q=35.520872,127.729226" target="_blank" onclick="event.stopPropagation()" class="map-btn">地圖</a>
+    </div>
+  
+    <div class="card " onclick="toggle(8)">
+      <div class="check "></div>
+      <div class="info">
+        <div class="name ">🍄 秋田縣</div>
+        <div class="coord">39.757226605, 140.7947358</div>
+        <div class="tags"><span class="tag country">日本</span></div>
+      </div>
+      <a href="https://maps.google.com/?q=39.757226605,140.7947358" target="_blank" onclick="event.stopPropagation()" class="map-btn">地圖</a>
+    </div>
+  
+    <div class="card " onclick="toggle(9)">
+      <div class="check "></div>
+      <div class="info">
+        <div class="name ">🍄 貓</div>
+        <div class="coord">-37.759013, 144.746114</div>
+        
+      </div>
+      <a href="https://maps.google.com/?q=-37.759013,144.746114" target="_blank" onclick="event.stopPropagation()" class="map-btn">地圖</a>
+    </div>
+  
+    <div class="card " onclick="toggle(10)">
+      <div class="check "></div>
+      <div class="info">
+        <div class="name ">🍄 狗</div>
+        <div class="coord">-37.758521, 144.744678</div>
+        
+      </div>
+      <a href="https://maps.google.com/?q=-37.758521,144.744678" target="_blank" onclick="event.stopPropagation()" class="map-btn">地圖</a>
+    </div>
+  
+    <div class="card " onclick="toggle(11)">
+      <div class="check "></div>
+      <div class="info">
+        <div class="name ">🍄 魔女宅急便</div>
+        <div class="coord">15.520605, -88.023185</div>
+        
+      </div>
+      <a href="https://maps.google.com/?q=15.520605,-88.023185" target="_blank" onclick="event.stopPropagation()" class="map-btn">地圖</a>
+    </div>
+  
+    <div class="card " onclick="toggle(12)">
+      <div class="check "></div>
+      <div class="info">
+        <div class="name ">🍄 塗鴉皮卡丘</div>
+        <div class="coord">-33.0316389, -71.4922222</div>
+        
+      </div>
+      <a href="https://maps.google.com/?q=-33.0316389,-71.4922222" target="_blank" onclick="event.stopPropagation()" class="map-btn">地圖</a>
+    </div>
+  
+    <div class="card " onclick="toggle(13)">
+      <div class="check "></div>
+      <div class="info">
+        <div class="name ">🍄 德國夜晚橋底下</div>
+        <div class="coord">50.755295, 7.097979</div>
+        <div class="tags"><span class="tag country">德國</span></div>
+      </div>
+      <a href="https://maps.google.com/?q=50.755295,7.097979" target="_blank" onclick="event.stopPropagation()" class="map-btn">地圖</a>
+    </div>
+  
+    <div class="card " onclick="toggle(14)">
+      <div class="check "></div>
+      <div class="info">
+        <div class="name ">🍄 富士山朝霧高原</div>
+        <div class="coord">35.414202, 138.620962</div>
+        <div class="tags"><span class="tag country">日本</span></div>
+      </div>
+      <a href="https://maps.google.com/?q=35.414202,138.620962" target="_blank" onclick="event.stopPropagation()" class="map-btn">地圖</a>
+    </div>
+  
+    <div class="card " onclick="toggle(15)">
+      <div class="check "></div>
+      <div class="info">
+        <div class="name ">🍄 萊姆頓海岸 Grand Bend燈塔</div>
+        <div class="coord">43.313829, -81.768</div>
+        <div class="tags"><span class="tag ">紫光</span></div>
+      </div>
+      <a href="https://maps.google.com/?q=43.313829,-81.768" target="_blank" onclick="event.stopPropagation()" class="map-btn">地圖</a>
+    </div>
+  
+    <div class="card " onclick="toggle(16)">
+      <div class="check "></div>
+      <div class="info">
+        <div class="name ">🍄 仙台 排球少年</div>
+        <div class="coord">38.21752, 140.869512</div>
+        <div class="tags"><span class="tag country">日本</span></div>
+      </div>
+      <a href="https://maps.google.com/?q=38.21752,140.869512" target="_blank" onclick="event.stopPropagation()" class="map-btn">地圖</a>
+    </div>
+  
+    <div class="card " onclick="toggle(25)">
+      <div class="check "></div>
+      <div class="info">
+        <div class="name ">🍄 台中三井摩天輪</div>
+        <div class="coord">24.2596, 120.5173</div>
+        <div class="tags"><span class="tag country">台灣</span></div>
+      </div>
+      <a href="https://maps.google.com/?q=24.2596,120.5173" target="_blank" onclick="event.stopPropagation()" class="map-btn">地圖</a>
+    </div>
+  
+    <div class="card " onclick="toggle(26)">
+      <div class="check "></div>
+      <div class="info">
+        <div class="name ">🍄 田貫湖狸貓與富士山</div>
+        <div class="coord">35.3448, 138.5575</div>
+        <div class="tags"><span class="tag country">日本</span></div>
+      </div>
+      <a href="https://maps.google.com/?q=35.3448,138.5575" target="_blank" onclick="event.stopPropagation()" class="map-btn">地圖</a>
+    </div>
+  
+    <div class="card " onclick="toggle(27)">
+      <div class="check "></div>
+      <div class="info">
+        <div class="name ">🍄 高雄祈願千野村達摩</div>
+        <div class="coord">22.8151, 120.3955</div>
+        <div class="tags"><span class="tag country">台灣</span></div>
+      </div>
+      <a href="https://maps.google.com/?q=22.8151,120.3955" target="_blank" onclick="event.stopPropagation()" class="map-btn">地圖</a>
+    </div>
+  
+    <div class="card " onclick="toggle(28)">
+      <div class="check "></div>
+      <div class="info">
+        <div class="name ">🍄 台東太麻里觀景台</div>
+        <div class="coord">22.6548, 121.0228</div>
+        <div class="tags"><span class="tag country">台灣</span></div>
+      </div>
+      <a href="https://maps.google.com/?q=22.6548,121.0228" target="_blank" onclick="event.stopPropagation()" class="map-btn">地圖</a>
+    </div>
+  
+    <div class="card " onclick="toggle(29)">
+      <div class="check "></div>
+      <div class="info">
+        <div class="name ">🍄 日本青池</div>
+        <div class="coord">43.4931, 142.6141</div>
+        <div class="tags"><span class="tag country">日本</span></div>
+      </div>
+      <a href="https://maps.google.com/?q=43.4931,142.6141" target="_blank" onclick="event.stopPropagation()" class="map-btn">地圖</a>
+    </div>
+  
+    <div class="card " onclick="toggle(30)">
+      <div class="check "></div>
+      <div class="info">
+        <div class="name ">🍄 台南忍者貓</div>
+        <div class="coord">23.0897, 120.4515</div>
+        <div class="tags"><span class="tag country">台灣</span></div>
+      </div>
+      <a href="https://maps.google.com/?q=23.0897,120.4515" target="_blank" onclick="event.stopPropagation()" class="map-btn">地圖</a>
+    </div>
+  
+    <div class="card " onclick="toggle(31)">
+      <div class="check "></div>
+      <div class="info">
+        <div class="name ">🍄 基隆正濱漁港彩虹屋</div>
+        <div class="coord">25.1523, 121.769</div>
+        <div class="tags"><span class="tag country">台灣</span></div>
+      </div>
+      <a href="https://maps.google.com/?q=25.1523,121.769" target="_blank" onclick="event.stopPropagation()" class="map-btn">地圖</a>
+    </div>
+  
+    <div class="card " onclick="toggle(32)">
+      <div class="check "></div>
+      <div class="info">
+        <div class="name ">🍄 北海道滑雪場山頂</div>
+        <div class="coord">42.8747, 140.6588</div>
+        <div class="tags"><span class="tag country">日本</span></div>
+      </div>
+      <a href="https://maps.google.com/?q=42.8747,140.6588" target="_blank" onclick="event.stopPropagation()" class="map-btn">地圖</a>
+    </div>
+  
+    <div class="card " onclick="toggle(33)">
+      <div class="check "></div>
+      <div class="info">
+        <div class="name ">🍄 嚴島神社大鳥居</div>
+        <div class="coord">34.2959, 132.3197</div>
+        <div class="tags"><span class="tag country">日本</span></div>
+      </div>
+      <a href="https://maps.google.com/?q=34.2959,132.3197" target="_blank" onclick="event.stopPropagation()" class="map-btn">地圖</a>
+    </div>
+  
+    <div class="card " onclick="toggle(34)">
+      <div class="check "></div>
+      <div class="info">
+        <div class="name ">🍄 紐西蘭大腳踏車</div>
+        <div class="coord">-38.6735, 176.069</div>
+        <div class="tags"><span class="tag country">紐西蘭</span></div>
+      </div>
+      <a href="https://maps.google.com/?q=-38.6735,176.069" target="_blank" onclick="event.stopPropagation()" class="map-btn">地圖</a>
+    </div>
+  
+    <div class="card " onclick="toggle(35)">
+      <div class="check "></div>
+      <div class="info">
+        <div class="name ">🍄 和光市消波塊</div>
+        <div class="coord">35.8042, 139.6316</div>
+        <div class="tags"><span class="tag country">日本</span></div>
+      </div>
+      <a href="https://maps.google.com/?q=35.8042,139.6316" target="_blank" onclick="event.stopPropagation()" class="map-btn">地圖</a>
+    </div>
+  
+    <div class="card " onclick="toggle(36)">
+      <div class="check "></div>
+      <div class="info">
+        <div class="name ">🍄 小琉球花瓶岩</div>
+        <div class="coord">22.3552, 120.381</div>
+        <div class="tags"><span class="tag country">台灣</span></div>
+      </div>
+      <a href="https://maps.google.com/?q=22.3552,120.381" target="_blank" onclick="event.stopPropagation()" class="map-btn">地圖</a>
+    </div>
+  
+    <div class="card " onclick="toggle(37)">
+      <div class="check "></div>
+      <div class="info">
+        <div class="name ">🍄 愛知縣河津櫻花</div>
+        <div class="coord">34.936, 137.5787</div>
+        <div class="tags"><span class="tag country">日本</span></div>
+      </div>
+      <a href="https://maps.google.com/?q=34.936,137.5787" target="_blank" onclick="event.stopPropagation()" class="map-btn">地圖</a>
+    </div>
+  
+    <div class="card " onclick="toggle(38)">
+      <div class="check "></div>
+      <div class="info">
+        <div class="name ">🍄 山口縣角島大橋</div>
+        <div class="coord">34.3478, 130.8948</div>
+        <div class="tags"><span class="tag country">日本</span></div>
+      </div>
+      <a href="https://maps.google.com/?q=34.3478,130.8948" target="_blank" onclick="event.stopPropagation()" class="map-btn">地圖</a>
+    </div>
+  
+    <div class="card " onclick="toggle(39)">
+      <div class="check "></div>
+      <div class="info">
+        <div class="name ">🍄 日月潭九蛙</div>
+        <div class="coord">23.8588, 120.9356</div>
+        <div class="tags"><span class="tag country">台灣</span></div>
+      </div>
+      <a href="https://maps.google.com/?q=23.8588,120.9356" target="_blank" onclick="event.stopPropagation()" class="map-btn">地圖</a>
+    </div>
+  
+    <div class="card " onclick="toggle(40)">
+      <div class="check "></div>
+      <div class="info">
+        <div class="name ">🍄 希臘pharos燈塔</div>
+        <div class="coord">38.0284, 22.85</div>
+        <div class="tags"><span class="tag country">希臘</span></div>
+      </div>
+      <a href="https://maps.google.com/?q=38.0284,22.85" target="_blank" onclick="event.stopPropagation()" class="map-btn">地圖</a>
+    </div>
+  
+    <div class="card " onclick="toggle(41)">
+      <div class="check "></div>
+      <div class="info">
+        <div class="name ">🍄 大阪港夕陽</div>
+        <div class="coord">34.6507, 135.4256</div>
+        <div class="tags"><span class="tag country">日本</span></div>
+      </div>
+      <a href="https://maps.google.com/?q=34.6507,135.4256" target="_blank" onclick="event.stopPropagation()" class="map-btn">地圖</a>
+    </div>
+  
+    <div class="card " onclick="toggle(42)">
+      <div class="check "></div>
+      <div class="info">
+        <div class="name ">🍄 南非好望角開普敦</div>
+        <div class="coord">-34.3556, 18.4962</div>
+        <div class="tags"><span class="tag country">南非</span></div>
+      </div>
+      <a href="https://maps.google.com/?q=-34.3556,18.4962" target="_blank" onclick="event.stopPropagation()" class="map-btn">地圖</a>
+    </div>
+  
+    <div class="card " onclick="toggle(43)">
+      <div class="check "></div>
+      <div class="info">
+        <div class="name ">🍄 四の宮宿橋櫻花</div>
+        <div class="coord">35.7491, 139.6631</div>
+        <div class="tags"><span class="tag country">日本</span></div>
+      </div>
+      <a href="https://maps.google.com/?q=35.7491,139.6631" target="_blank" onclick="event.stopPropagation()" class="map-btn">地圖</a>
+    </div>
+  
+    <div class="card " onclick="toggle(44)">
+      <div class="check "></div>
+      <div class="info">
+        <div class="name ">🍄 新竹夏季三角教堂</div>
+        <div class="coord">24.8883, 121.1024</div>
+        <div class="tags"><span class="tag country">台灣</span></div>
+      </div>
+      <a href="https://maps.google.com/?q=24.8883,121.1024" target="_blank" onclick="event.stopPropagation()" class="map-btn">地圖</a>
+    </div>
+  
+    <div class="card " onclick="toggle(45)">
+      <div class="check "></div>
+      <div class="info">
+        <div class="name ">🍄 石門拱橋</div>
+        <div class="coord">25.2972518, 121.5684246</div>
+        <div class="tags"><span class="tag country">台灣</span></div>
+      </div>
+      <a href="https://maps.google.com/?q=25.2972518,121.5684246" target="_blank" onclick="event.stopPropagation()" class="map-btn">地圖</a>
+    </div>
+  
+    <div class="card " onclick="toggle(46)">
+      <div class="check "></div>
+      <div class="info">
+        <div class="name ">🍄 匈牙利格子賽車</div>
+        <div class="coord">47.5302, 19.033</div>
+        <div class="tags"><span class="tag country">匈牙利</span></div>
+      </div>
+      <a href="https://maps.google.com/?q=47.5302,19.033" target="_blank" onclick="event.stopPropagation()" class="map-btn">地圖</a>
+    </div>
+  
+    <div class="card " onclick="toggle(47)">
+      <div class="check "></div>
+      <div class="info">
+        <div class="name ">🍄 希臘沉船</div>
+        <div class="coord">37.8594, 20.6249</div>
+        <div class="tags"><span class="tag country">希臘</span></div>
+      </div>
+      <a href="https://maps.google.com/?q=37.8594,20.6249" target="_blank" onclick="event.stopPropagation()" class="map-btn">地圖</a>
+    </div>
+  
+    <div class="card " onclick="toggle(48)">
+      <div class="check "></div>
+      <div class="info">
+        <div class="name ">🍄 匈牙利港口</div>
+        <div class="coord">47.5313, 19.0528</div>
+        <div class="tags"><span class="tag country">匈牙利</span></div>
+      </div>
+      <a href="https://maps.google.com/?q=47.5313,19.0528" target="_blank" onclick="event.stopPropagation()" class="map-btn">地圖</a>
+    </div>
+  
+    <div class="card " onclick="toggle(49)">
+      <div class="check "></div>
+      <div class="info">
+        <div class="name ">🍄 日本馬車</div>
+        <div class="coord">34.846528, 135.19137</div>
+        <div class="tags"><span class="tag country">日本</span></div>
+      </div>
+      <a href="https://maps.google.com/?q=34.846528,135.19137" target="_blank" onclick="event.stopPropagation()" class="map-btn">地圖</a>
+    </div>
+  
+    <div class="card " onclick="toggle(50)">
+      <div class="check "></div>
+      <div class="info">
+        <div class="name ">🍄 阿里山巨木</div>
+        <div class="coord">23.5049, 120.8032</div>
+        <div class="tags"><span class="tag country">台灣</span></div>
+      </div>
+      <a href="https://maps.google.com/?q=23.5049,120.8032" target="_blank" onclick="event.stopPropagation()" class="map-btn">地圖</a>
+    </div>
+  
+    <div class="card " onclick="toggle(51)">
+      <div class="check "></div>
+      <div class="info">
+        <div class="name ">🍄 尼泊爾橘色雪人</div>
+        <div class="coord">27.8898, 86.8264</div>
+        <div class="tags"><span class="tag country">尼泊爾</span></div>
+      </div>
+      <a href="https://maps.google.com/?q=27.8898,86.8264" target="_blank" onclick="event.stopPropagation()" class="map-btn">地圖</a>
+    </div>
+  
+    <div class="card " onclick="toggle(82)">
+      <div class="check "></div>
+      <div class="info">
+        <div class="name ">🍄 -</div>
+        <div class="coord">47.554367, 3.167368</div>
+        
+      </div>
+      <a href="https://maps.google.com/?q=47.554367,3.167368" target="_blank" onclick="event.stopPropagation()" class="map-btn">地圖</a>
+    </div>
+  
+    <div class="card " onclick="toggle(83)">
+      <div class="check "></div>
+      <div class="info">
+        <div class="name ">🍄 -</div>
+        <div class="coord">23.592118, 120.355486</div>
+        
+      </div>
+      <a href="https://maps.google.com/?q=23.592118,120.355486" target="_blank" onclick="event.stopPropagation()" class="map-btn">地圖</a>
+    </div>
+  
+    <div class="card " onclick="toggle(84)">
+      <div class="check "></div>
+      <div class="info">
+        <div class="name ">🍄 - 韓國 黃色人偶</div>
+        <div class="coord">37.556256, 126.916824</div>
+        <div class="tags"><span class="tag country">韓國</span></div>
+      </div>
+      <a href="https://maps.google.com/?q=37.556256,126.916824" target="_blank" onclick="event.stopPropagation()" class="map-btn">地圖</a>
+    </div>
+  
+    <div class="card " onclick="toggle(85)">
+      <div class="check "></div>
+      <div class="info">
+        <div class="name ">🍄 - 日本果子舖</div>
+        <div class="coord">43.18935, 141.002023</div>
+        <div class="tags"><span class="tag country">日本</span></div>
+      </div>
+      <a href="https://maps.google.com/?q=43.18935,141.002023" target="_blank" onclick="event.stopPropagation()" class="map-btn">地圖</a>
+    </div>
+  <div class="section-title flower">🌹 花點（42）</div>
+    <div class="card " onclick="toggle(4)">
+      <div class="check "></div>
+      <div class="info">
+        <div class="name ">🌹 萊希瀑布</div>
+        <div class="coord">47.561806, 10.694803</div>
+        <div class="tags"><span class="tag country">德國</span></div>
+      </div>
+      <a href="https://maps.google.com/?q=47.561806,10.694803" target="_blank" onclick="event.stopPropagation()" class="map-btn">地圖</a>
+    </div>
+  
+    <div class="card " onclick="toggle(5)">
+      <div class="check "></div>
+      <div class="info">
+        <div class="name ">🌹 47.5610188, 10.7387846</div>
+        <div class="coord">47.5610188, 10.7387846</div>
+        
+      </div>
+      <a href="https://maps.google.com/?q=47.5610188,10.7387846" target="_blank" onclick="event.stopPropagation()" class="map-btn">地圖</a>
+    </div>
+  
+    <div class="card " onclick="toggle(6)">
+      <div class="check "></div>
+      <div class="info">
+        <div class="name ">🌹 北海道</div>
+        <div class="coord">43.032845, 141.389816</div>
+        <div class="tags"><span class="tag country">日本</span><span class="tag ">北</span></div>
+      </div>
+      <a href="https://maps.google.com/?q=43.032845,141.389816" target="_blank" onclick="event.stopPropagation()" class="map-btn">地圖</a>
+    </div>
+  
+    <div class="card " onclick="toggle(7)">
+      <div class="check "></div>
+      <div class="info">
+        <div class="name ">🌹 狐狸打架</div>
+        <div class="coord">38.041013, 140.531262</div>
+        
+      </div>
+      <a href="https://maps.google.com/?q=38.041013,140.531262" target="_blank" onclick="event.stopPropagation()" class="map-btn">地圖</a>
+    </div>
+  
+    <div class="card " onclick="toggle(17)">
+      <div class="check "></div>
+      <div class="info">
+        <div class="name ">🌹 🦭</div>
+        <div class="coord">51.236251, 2.917568</div>
+        
+      </div>
+      <a href="https://maps.google.com/?q=51.236251,2.917568" target="_blank" onclick="event.stopPropagation()" class="map-btn">地圖</a>
+    </div>
+  
+    <div class="card " onclick="toggle(18)">
+      <div class="check "></div>
+      <div class="info">
+        <div class="name ">🌹 👻</div>
+        <div class="coord">51.235079, 2.915144</div>
+        
+      </div>
+      <a href="https://maps.google.com/?q=51.235079,2.915144" target="_blank" onclick="event.stopPropagation()" class="map-btn">地圖</a>
+    </div>
+  
+    <div class="card " onclick="toggle(19)">
+      <div class="check "></div>
+      <div class="info">
+        <div class="name ">🌹 💩</div>
+        <div class="coord">51.234047, 2.913381</div>
+        
+      </div>
+      <a href="https://maps.google.com/?q=51.234047,2.913381" target="_blank" onclick="event.stopPropagation()" class="map-btn">地圖</a>
+    </div>
+  
+    <div class="card " onclick="toggle(20)">
+      <div class="check "></div>
+      <div class="info">
+        <div class="name ">🌹 ❤️</div>
+        <div class="coord">51.233421, 2.912234</div>
+        
+      </div>
+      <a href="https://maps.google.com/?q=51.233421,2.912234" target="_blank" onclick="event.stopPropagation()" class="map-btn">地圖</a>
+    </div>
+  
+    <div class="card " onclick="toggle(21)">
+      <div class="check "></div>
+      <div class="info">
+        <div class="name ">🌹 🚢</div>
+        <div class="coord">51.231065, 2.909995</div>
+        
+      </div>
+      <a href="https://maps.google.com/?q=51.231065,2.909995" target="_blank" onclick="event.stopPropagation()" class="map-btn">地圖</a>
+    </div>
+  
+    <div class="card " onclick="toggle(22)">
+      <div class="check "></div>
+      <div class="info">
+        <div class="name ">🌹 🦐</div>
+        <div class="coord">51.229992, 2.907956</div>
+        
+      </div>
+      <a href="https://maps.google.com/?q=51.229992,2.907956" target="_blank" onclick="event.stopPropagation()" class="map-btn">地圖</a>
+    </div>
+  
+    <div class="card " onclick="toggle(23)">
+      <div class="check "></div>
+      <div class="info">
+        <div class="name ">🌹 ⚽️</div>
+        <div class="coord">51.227394, 2.902672</div>
+        
+      </div>
+      <a href="https://maps.google.com/?q=51.227394,2.902672" target="_blank" onclick="event.stopPropagation()" class="map-btn">地圖</a>
+    </div>
+  
+    <div class="card " onclick="toggle(24)">
+      <div class="check "></div>
+      <div class="info">
+        <div class="name ">🌹 🚤</div>
+        <div class="coord">51.215697, 2.875797</div>
+        
+      </div>
+      <a href="https://maps.google.com/?q=51.215697,2.875797" target="_blank" onclick="event.stopPropagation()" class="map-btn">地圖</a>
+    </div>
+  
+    <div class="card " onclick="toggle(52)">
+      <div class="check "></div>
+      <div class="info">
+        <div class="name ">🌹 日本福岡大鋼彈</div>
+        <div class="coord">33.5656, 130.4413</div>
+        <div class="tags"><span class="tag country">日本</span></div>
+      </div>
+      <a href="https://maps.google.com/?q=33.5656,130.4413" target="_blank" onclick="event.stopPropagation()" class="map-btn">地圖</a>
+    </div>
+  
+    <div class="card " onclick="toggle(53)">
+      <div class="check "></div>
+      <div class="info">
+        <div class="name ">🌹 韓國黃色燈塔</div>
+        <div class="coord">37.0609, 126.5598</div>
+        <div class="tags"><span class="tag country">韓國</span></div>
+      </div>
+      <a href="https://maps.google.com/?q=37.0609,126.5598" target="_blank" onclick="event.stopPropagation()" class="map-btn">地圖</a>
+    </div>
+  
+    <div class="card " onclick="toggle(54)">
+      <div class="check "></div>
+      <div class="info">
+        <div class="name ">🌹 京都寶可夢中心舞妓皮卡丘</div>
+        <div class="coord">35.0034, 135.7583</div>
+        <div class="tags"><span class="tag country">日本</span></div>
+      </div>
+      <a href="https://maps.google.com/?q=35.0034,135.7583" target="_blank" onclick="event.stopPropagation()" class="map-btn">地圖</a>
+    </div>
+  
+    <div class="card " onclick="toggle(55)">
+      <div class="check "></div>
+      <div class="info">
+        <div class="name ">🌹 台灣麗寶摩天輪&amp;聖誕樹</div>
+        <div class="coord">24.3252, 120.7007</div>
+        <div class="tags"><span class="tag country">台灣</span></div>
+      </div>
+      <a href="https://maps.google.com/?q=24.3252,120.7007" target="_blank" onclick="event.stopPropagation()" class="map-btn">地圖</a>
+    </div>
+  
+    <div class="card " onclick="toggle(56)">
+      <div class="check "></div>
+      <div class="info">
+        <div class="name ">🌹 桃園橘村屋兔子與熊</div>
+        <div class="coord">24.9905, 121.3134</div>
+        <div class="tags"><span class="tag country">台灣</span></div>
+      </div>
+      <a href="https://maps.google.com/?q=24.9905,121.3134" target="_blank" onclick="event.stopPropagation()" class="map-btn">地圖</a>
+    </div>
+  
+    <div class="card " onclick="toggle(57)">
+      <div class="check "></div>
+      <div class="info">
+        <div class="name ">🌹 澳洲綠巨人浩克</div>
+        <div class="coord">-31.9412, 115.8484</div>
+        <div class="tags"><span class="tag country">澳洲</span></div>
+      </div>
+      <a href="https://maps.google.com/?q=-31.9412,115.8484" target="_blank" onclick="event.stopPropagation()" class="map-btn">地圖</a>
+    </div>
+  
+    <div class="card " onclick="toggle(58)">
+      <div class="check "></div>
+      <div class="info">
+        <div class="name ">🌹 日本野邊山車站雪景</div>
+        <div class="coord">35.9553, 138.4744</div>
+        <div class="tags"><span class="tag country">日本</span></div>
+      </div>
+      <a href="https://maps.google.com/?q=35.9553,138.4744" target="_blank" onclick="event.stopPropagation()" class="map-btn">地圖</a>
+    </div>
+  
+    <div class="card " onclick="toggle(59)">
+      <div class="check "></div>
+      <div class="info">
+        <div class="name ">🌹 日本富士之櫻</div>
+        <div class="coord">35.4422, 138.6029</div>
+        <div class="tags"><span class="tag country">日本</span></div>
+      </div>
+      <a href="https://maps.google.com/?q=35.4422,138.6029" target="_blank" onclick="event.stopPropagation()" class="map-btn">地圖</a>
+    </div>
+  
+    <div class="card " onclick="toggle(60)">
+      <div class="check "></div>
+      <div class="info">
+        <div class="name ">🌹 埃及金字塔</div>
+        <div class="coord">29.9723, 31.1285</div>
+        <div class="tags"><span class="tag country">埃及</span></div>
+      </div>
+      <a href="https://maps.google.com/?q=29.9723,31.1285" target="_blank" onclick="event.stopPropagation()" class="map-btn">地圖</a>
+    </div>
+  
+    <div class="card " onclick="toggle(61)">
+      <div class="check "></div>
+      <div class="info">
+        <div class="name ">🌹 冰島黑教堂</div>
+        <div class="coord">64.8214, -23.3857</div>
+        <div class="tags"><span class="tag country">冰島</span></div>
+      </div>
+      <a href="https://maps.google.com/?q=64.8214,-23.3857" target="_blank" onclick="event.stopPropagation()" class="map-btn">地圖</a>
+    </div>
+  
+    <div class="card " onclick="toggle(62)">
+      <div class="check "></div>
+      <div class="info">
+        <div class="name ">🌹 希臘無頭人</div>
+        <div class="coord">37.9055, 22.8788</div>
+        <div class="tags"><span class="tag country">希臘</span></div>
+      </div>
+      <a href="https://maps.google.com/?q=37.9055,22.8788" target="_blank" onclick="event.stopPropagation()" class="map-btn">地圖</a>
+    </div>
+  
+    <div class="card " onclick="toggle(63)">
+      <div class="check "></div>
+      <div class="info">
+        <div class="name ">🌹 日本宇賀神社</div>
+        <div class="coord">34.9764, 135.7633</div>
+        <div class="tags"><span class="tag country">日本</span></div>
+      </div>
+      <a href="https://maps.google.com/?q=34.9764,135.7633" target="_blank" onclick="event.stopPropagation()" class="map-btn">地圖</a>
+    </div>
+  
+    <div class="card " onclick="toggle(64)">
+      <div class="check "></div>
+      <div class="info">
+        <div class="name ">🌹 淡路島公園蠟筆小新</div>
+        <div class="coord">34.5743, 135.0049</div>
+        <div class="tags"><span class="tag country">日本</span></div>
+      </div>
+      <a href="https://maps.google.com/?q=34.5743,135.0049" target="_blank" onclick="event.stopPropagation()" class="map-btn">地圖</a>
+    </div>
+  
+    <div class="card " onclick="toggle(65)">
+      <div class="check "></div>
+      <div class="info">
+        <div class="name ">🌹 德國龍城堡Schiller</div>
+        <div class="coord">50.6685, 7.2067</div>
+        <div class="tags"><span class="tag country">德國</span></div>
+      </div>
+      <a href="https://maps.google.com/?q=50.6685,7.2067" target="_blank" onclick="event.stopPropagation()" class="map-btn">地圖</a>
+    </div>
+  
+    <div class="card " onclick="toggle(66)">
+      <div class="check "></div>
+      <div class="info">
+        <div class="name ">🌹 復活節島摩艾</div>
+        <div class="coord">-27.1151, -109.3947</div>
+        <div class="tags"><span class="tag country">復活節島</span></div>
+      </div>
+      <a href="https://maps.google.com/?q=-27.1151,-109.3947" target="_blank" onclick="event.stopPropagation()" class="map-btn">地圖</a>
+    </div>
+  
+    <div class="card " onclick="toggle(67)">
+      <div class="check "></div>
+      <div class="info">
+        <div class="name ">🌹 台北101建築夜景</div>
+        <div class="coord">25.0391, 121.5602</div>
+        <div class="tags"><span class="tag country">台灣</span></div>
+      </div>
+      <a href="https://maps.google.com/?q=25.0391,121.5602" target="_blank" onclick="event.stopPropagation()" class="map-btn">地圖</a>
+    </div>
+  
+    <div class="card " onclick="toggle(68)">
+      <div class="check "></div>
+      <div class="info">
+        <div class="name ">🌹 富士山夜景</div>
+        <div class="coord">35.021968, 138.478161</div>
+        <div class="tags"><span class="tag country">日本</span></div>
+      </div>
+      <a href="https://maps.google.com/?q=35.021968,138.478161" target="_blank" onclick="event.stopPropagation()" class="map-btn">地圖</a>
+    </div>
+  
+    <div class="card " onclick="toggle(69)">
+      <div class="check "></div>
+      <div class="info">
+        <div class="name ">🌹 吉伊卡哇</div>
+        <div class="coord">34.706095, 135.4984</div>
+        <div class="tags"><span class="tag country">日本</span></div>
+      </div>
+      <a href="https://maps.google.com/?q=34.706095,135.4984" target="_blank" onclick="event.stopPropagation()" class="map-btn">地圖</a>
+    </div>
+  
+    <div class="card " onclick="toggle(70)">
+      <div class="check "></div>
+      <div class="info">
+        <div class="name ">🌹 倫敦眼</div>
+        <div class="coord">51.50333, -0.119407</div>
+        <div class="tags"><span class="tag country">英國</span></div>
+      </div>
+      <a href="https://maps.google.com/?q=51.50333,-0.119407" target="_blank" onclick="event.stopPropagation()" class="map-btn">地圖</a>
+    </div>
+  
+    <div class="card " onclick="toggle(71)">
+      <div class="check "></div>
+      <div class="info">
+        <div class="name ">🌹 貓咪紅牆</div>
+        <div class="coord">-34.652406, -59.441565</div>
+        
+      </div>
+      <a href="https://maps.google.com/?q=-34.652406,-59.441565" target="_blank" onclick="event.stopPropagation()" class="map-btn">地圖</a>
+    </div>
+  
+    <div class="card " onclick="toggle(72)">
+      <div class="check "></div>
+      <div class="info">
+        <div class="name ">🌹 貓咪咖啡</div>
+        <div class="coord">-25.278197, -57.598854</div>
+        
+      </div>
+      <a href="https://maps.google.com/?q=-25.278197,-57.598854" target="_blank" onclick="event.stopPropagation()" class="map-btn">地圖</a>
+    </div>
+  
+    <div class="card " onclick="toggle(73)">
+      <div class="check "></div>
+      <div class="info">
+        <div class="name ">🌹 階段天空橋</div>
+        <div class="coord">34.513303, 134.869103</div>
+        <div class="tags"><span class="tag country">日本</span></div>
+      </div>
+      <a href="https://maps.google.com/?q=34.513303,134.869103" target="_blank" onclick="event.stopPropagation()" class="map-btn">地圖</a>
+    </div>
+  
+    <div class="card " onclick="toggle(74)">
+      <div class="check "></div>
+      <div class="info">
+        <div class="name ">🌹 MOOMIN</div>
+        <div class="coord">37.656986, 126.668483</div>
+        <div class="tags"><span class="tag country">韓國</span></div>
+      </div>
+      <a href="https://maps.google.com/?q=37.656986,126.668483" target="_blank" onclick="event.stopPropagation()" class="map-btn">地圖</a>
+    </div>
+  
+    <div class="card " onclick="toggle(75)">
+      <div class="check "></div>
+      <div class="info">
+        <div class="name ">🌹 瓶中花</div>
+        <div class="coord">52.418324, 4.620756</div>
+        <div class="tags"><span class="tag country">荷蘭</span></div>
+      </div>
+      <a href="https://maps.google.com/?q=52.418324,4.620756" target="_blank" onclick="event.stopPropagation()" class="map-btn">地圖</a>
+    </div>
+  
+    <div class="card " onclick="toggle(76)">
+      <div class="check "></div>
+      <div class="info">
+        <div class="name ">🌹 城堡及月亮</div>
+        <div class="coord">45.118242, 21.301372</div>
+        
+      </div>
+      <a href="https://maps.google.com/?q=45.118242,21.301372" target="_blank" onclick="event.stopPropagation()" class="map-btn">地圖</a>
+    </div>
+  
+    <div class="card " onclick="toggle(77)">
+      <div class="check "></div>
+      <div class="info">
+        <div class="name ">🌹 南韓poppy花海</div>
+        <div class="coord">37.513413, 127.125983</div>
+        <div class="tags"><span class="tag country">韓國</span></div>
+      </div>
+      <a href="https://maps.google.com/?q=37.513413,127.125983" target="_blank" onclick="event.stopPropagation()" class="map-btn">地圖</a>
+    </div>
+  
+    <div class="card " onclick="toggle(78)">
+      <div class="check "></div>
+      <div class="info">
+        <div class="name ">🌹 倒映花</div>
+        <div class="coord">35.080106, 136.704872</div>
+        <div class="tags"><span class="tag country">日本</span></div>
+      </div>
+      <a href="https://maps.google.com/?q=35.080106,136.704872" target="_blank" onclick="event.stopPropagation()" class="map-btn">地圖</a>
+    </div>
+  
+    <div class="card " onclick="toggle(79)">
+      <div class="check "></div>
+      <div class="info">
+        <div class="name ">🌹 熊本夕陽燈</div>
+        <div class="coord">32.704029, 130.581201</div>
+        <div class="tags"><span class="tag country">日本</span></div>
+      </div>
+      <a href="https://maps.google.com/?q=32.704029,130.581201" target="_blank" onclick="event.stopPropagation()" class="map-btn">地圖</a>
+    </div>
+  
+    <div class="card " onclick="toggle(80)">
+      <div class="check "></div>
+      <div class="info">
+        <div class="name ">🌹 日本皮克敏</div>
+        <div class="coord">34.668248, 135.430474</div>
+        <div class="tags"><span class="tag country">日本</span></div>
+      </div>
+      <a href="https://maps.google.com/?q=34.668248,135.430474" target="_blank" onclick="event.stopPropagation()" class="map-btn">地圖</a>
+    </div>
+  
+    <div class="card " onclick="toggle(81)">
+      <div class="check "></div>
+      <div class="info">
+        <div class="name ">🌹 高雄豆豆龍</div>
+        <div class="coord">22.657294, 120.275778</div>
+        <div class="tags"><span class="tag country">台灣</span></div>
+      </div>
+      <a href="https://maps.google.com/?q=22.657294,120.275778" target="_blank" onclick="event.stopPropagation()" class="map-btn">地圖</a>
+    </div>
+  </div>
 
 <div class="add-area">
   <h3>➕ 新增座標</h3>
-  <div class="add-grid">
-    <div><label>名稱 / 備註</label><input id="in-name" placeholder="例：花夢里、奈良美智..." /></div>
-    <div><label>類型</label>
-      <select id="in-type">
-        <option value="mush">🍄 菇點</option>
-        <option value="flower">🌹 花點</option>
-      </select>
-    </div>
-    <div><label>緯度</label><input id="in-lat" placeholder="例：34.641542" /></div>
-    <div><label>經度</label><input id="in-lng" placeholder="例：132.922571" /></div>
-    <div><label>國家 / 地區</label><input id="in-country" placeholder="例：日本、德國..." /></div>
-    <div><label>標籤（空格分隔）</label><input id="in-tags" placeholder="例：藍莓 雪" /></div>
+  <div style="margin-bottom:10px;font-size:13px;color:#7c3aed;background:#f5f3ff;padding:10px 14px;border-radius:8px;line-height:1.8">
+    直接貼上座標，每行一筆，格式不限，例如：<br>
+    <span style="font-family:monospace;color:#6b21a8">
+      🍄花夢里 34.641542,132.922571 日本<br>
+      🌹倫敦眼 51.503330,-0.119407 英國<br>
+      25.0391,121.5602 台北101
+    </span>
   </div>
-  <button class="add-btn" onclick="addSpot()">新增</button>
+  <div style="margin-bottom:8px">
+    <label style="font-size:12px;color:#6b7280;display:block;margin-bottom:4px">預設類型（沒有 🍄🌹 符號時套用）</label>
+    <select id="in-default-type" style="border:1px solid #e5e7eb;border-radius:8px;padding:8px 12px;font-size:14px;background:white;">
+      <option value="mush">🍄 菇點</option>
+      <option value="flower">🌹 花點</option>
+    </select>
+  </div>
+  <textarea id="in-bulk" rows="6" placeholder="貼上座標在這裡..." style="width:100%;border:1px solid #e5e7eb;border-radius:8px;padding:10px 12px;font-size:14px;resize:vertical;box-sizing:border-box;font-family:Arial,sans-serif;"></textarea>
+  <div id="parse-preview" style="margin-top:8px;font-size:13px;color:#059669;font-weight:bold;"></div>
+  <button class="add-btn" onclick="bulkAdd()">解析並新增</button>
 </div>
 
 <script>
+const COUNTRIES = ["日本","台灣","韓國","德國","瑞典","澳洲","紐西蘭","南非","希臘","冰島","匈牙利","荷蘭","英國","埃及","尼泊爾","復活節島","法國","美國","加拿大","義大利","西班牙","葡萄牙","南韓"];
+
 const defaultSpots = [
-  { id:1, type:"mush", name:"花夢里", lat:34.641542, lng:132.922571, country:"日本", tags:["世羅町上津田"], done:false },
-  { id:2, type:"mush", name:"3/26 有盆", lat:61.2195278, lng:14.5391389, country:"瑞典", tags:["藍莓","雪"], done:false },
-  { id:3, type:"mush", name:"奈良美智", lat:35.5208720, lng:127.7292260, country:"", tags:[], done:false },
-  { id:4, type:"flower", name:"萊希瀑布", lat:47.561806, lng:10.694803, country:"德國", tags:[], done:false },
-  { id:5, type:"flower", name:"", lat:47.5610188, lng:10.7387846, country:"", tags:[], done:false },
-  { id:6, type:"flower", name:"北海道", lat:43.0328450, lng:141.3898160, country:"日本", tags:["北"], done:false },
+  { id:1,  type:"mush",   name:"花夢里",                    lat:34.641542,    lng:132.922571,  country:"日本",    tags:["世羅町上津田"], done:false },
+  { id:2,  type:"mush",   name:"3/26 有盆",                 lat:61.2195278,   lng:14.5391389,  country:"瑞典",    tags:["藍莓","雪"],    done:false },
+  { id:3,  type:"mush",   name:"奈良美智",                  lat:35.5208720,   lng:127.7292260, country:"",        tags:[],               done:false },
+  { id:4,  type:"flower", name:"萊希瀑布",                  lat:47.561806,    lng:10.694803,   country:"德國",    tags:[],               done:false },
+  { id:5,  type:"flower", name:"",                          lat:47.5610188,   lng:10.7387846,  country:"",        tags:[],               done:false },
+  { id:6,  type:"flower", name:"北海道",                    lat:43.0328450,   lng:141.3898160, country:"日本",    tags:["北"],           done:false },
+  { id:7,  type:"flower", name:"狐狸打架",                  lat:38.041013,    lng:140.531262,  country:"",        tags:[],               done:false },
+  { id:8,  type:"mush",   name:"秋田縣",                    lat:39.757226605, lng:140.7947358, country:"日本",    tags:[],               done:false },
+  { id:9,  type:"mush",   name:"貓",                        lat:-37.759013,   lng:144.746114,  country:"",        tags:[],               done:false },
+  { id:10, type:"mush",   name:"狗",                        lat:-37.7585210,  lng:144.7446780, country:"",        tags:[],               done:false },
+  { id:11, type:"mush",   name:"魔女宅急便",                lat:15.520605,    lng:-88.023185,  country:"",        tags:[],               done:false },
+  { id:12, type:"mush",   name:"塗鴉皮卡丘",                lat:-33.0316389,  lng:-71.4922222, country:"",        tags:[],               done:false },
+  { id:13, type:"mush",   name:"德國夜晚橋底下",            lat:50.755295,    lng:7.097979,    country:"德國",    tags:[],               done:false },
+  { id:14, type:"mush",   name:"富士山朝霧高原",            lat:35.4142020,   lng:138.6209620, country:"日本",    tags:[],               done:false },
+  { id:15, type:"mush",   name:"萊姆頓海岸 Grand Bend燈塔", lat:43.3138290,   lng:-81.7680000, country:"",        tags:["紫光"],         done:false },
+  { id:16, type:"mush",   name:"仙台 排球少年",             lat:38.21752,     lng:140.869512,  country:"日本",    tags:[],               done:false },
+  { id:17, type:"flower", name:"🦭",                        lat:51.236251,    lng:2.917568,    country:"",        tags:[],               done:false },
+  { id:18, type:"flower", name:"👻",                        lat:51.235079,    lng:2.915144,    country:"",        tags:[],               done:false },
+  { id:19, type:"flower", name:"💩",                        lat:51.234047,    lng:2.913381,    country:"",        tags:[],               done:false },
+  { id:20, type:"flower", name:"❤️",                        lat:51.233421,    lng:2.912234,    country:"",        tags:[],               done:false },
+  { id:21, type:"flower", name:"🚢",                        lat:51.231065,    lng:2.909995,    country:"",        tags:[],               done:false },
+  { id:22, type:"flower", name:"🦐",                        lat:51.229992,    lng:2.907956,    country:"",        tags:[],               done:false },
+  { id:23, type:"flower", name:"⚽️",                       lat:51.227394,    lng:2.902672,    country:"",        tags:[],               done:false },
+  { id:24, type:"flower", name:"🚤",                        lat:51.215697,    lng:2.875797,    country:"",        tags:[],               done:false },
+  { id:25, type:"mush",   name:"台中三井摩天輪",            lat:24.2596,      lng:120.5173,    country:"台灣",    tags:[],               done:false },
+  { id:26, type:"mush",   name:"田貫湖狸貓與富士山",        lat:35.3448,      lng:138.5575,    country:"日本",    tags:[],               done:false },
+  { id:27, type:"mush",   name:"高雄祈願千野村達摩",        lat:22.8151,      lng:120.3955,    country:"台灣",    tags:[],               done:false },
+  { id:28, type:"mush",   name:"台東太麻里觀景台",          lat:22.6548,      lng:121.0228,    country:"台灣",    tags:[],               done:false },
+  { id:29, type:"mush",   name:"日本青池",                  lat:43.4931,      lng:142.6141,    country:"日本",    tags:[],               done:false },
+  { id:30, type:"mush",   name:"台南忍者貓",                lat:23.0897,      lng:120.4515,    country:"台灣",    tags:[],               done:false },
+  { id:31, type:"mush",   name:"基隆正濱漁港彩虹屋",        lat:25.1523,      lng:121.7690,    country:"台灣",    tags:[],               done:false },
+  { id:32, type:"mush",   name:"北海道滑雪場山頂",          lat:42.8747,      lng:140.6588,    country:"日本",    tags:[],               done:false },
+  { id:33, type:"mush",   name:"嚴島神社大鳥居",            lat:34.2959,      lng:132.3197,    country:"日本",    tags:[],               done:false },
+  { id:34, type:"mush",   name:"紐西蘭大腳踏車",            lat:-38.6735,     lng:176.0690,    country:"紐西蘭",  tags:[],               done:false },
+  { id:35, type:"mush",   name:"和光市消波塊",              lat:35.8042,      lng:139.6316,    country:"日本",    tags:[],               done:false },
+  { id:36, type:"mush",   name:"小琉球花瓶岩",              lat:22.3552,      lng:120.3810,    country:"台灣",    tags:[],               done:false },
+  { id:37, type:"mush",   name:"愛知縣河津櫻花",            lat:34.9360,      lng:137.5787,    country:"日本",    tags:[],               done:false },
+  { id:38, type:"mush",   name:"山口縣角島大橋",            lat:34.3478,      lng:130.8948,    country:"日本",    tags:[],               done:false },
+  { id:39, type:"mush",   name:"日月潭九蛙",                lat:23.8588,      lng:120.9356,    country:"台灣",    tags:[],               done:false },
+  { id:40, type:"mush",   name:"希臘pharos燈塔",            lat:38.0284,      lng:22.8500,     country:"希臘",    tags:[],               done:false },
+  { id:41, type:"mush",   name:"大阪港夕陽",                lat:34.6507,      lng:135.4256,    country:"日本",    tags:[],               done:false },
+  { id:42, type:"mush",   name:"南非好望角開普敦",          lat:-34.3556,     lng:18.4962,     country:"南非",    tags:[],               done:false },
+  { id:43, type:"mush",   name:"四の宮宿橋櫻花",            lat:35.7491,      lng:139.6631,    country:"日本",    tags:[],               done:false },
+  { id:44, type:"mush",   name:"新竹夏季三角教堂",          lat:24.8883,      lng:121.1024,    country:"台灣",    tags:[],               done:false },
+  { id:45, type:"mush",   name:"石門拱橋",                  lat:25.2972518,   lng:121.5684246, country:"台灣",    tags:[],               done:false },
+  { id:46, type:"mush",   name:"匈牙利格子賽車",            lat:47.5302,      lng:19.033,      country:"匈牙利",  tags:[],               done:false },
+  { id:47, type:"mush",   name:"希臘沉船",                  lat:37.8594,      lng:20.6249,     country:"希臘",    tags:[],               done:false },
+  { id:48, type:"mush",   name:"匈牙利港口",                lat:47.5313,      lng:19.0528,     country:"匈牙利",  tags:[],               done:false },
+  { id:49, type:"mush",   name:"日本馬車",                  lat:34.846528,    lng:135.191370,  country:"日本",    tags:[],               done:false },
+  { id:50, type:"mush",   name:"阿里山巨木",                lat:23.5049,      lng:120.8032,    country:"台灣",    tags:[],               done:false },
+  { id:51, type:"mush",   name:"尼泊爾橘色雪人",            lat:27.8898,      lng:86.8264,     country:"尼泊爾",  tags:[],               done:false },
+  { id:52, type:"flower", name:"日本福岡大鋼彈",            lat:33.5656,      lng:130.4413,    country:"日本",    tags:[],               done:false },
+  { id:53, type:"flower", name:"韓國黃色燈塔",              lat:37.0609,      lng:126.5598,    country:"韓國",    tags:[],               done:false },
+  { id:54, type:"flower", name:"京都寶可夢中心舞妓皮卡丘",  lat:35.0034,      lng:135.7583,    country:"日本",    tags:[],               done:false },
+  { id:55, type:"flower", name:"台灣麗寶摩天輪&聖誕樹",     lat:24.3252,      lng:120.7007,    country:"台灣",    tags:[],               done:false },
+  { id:56, type:"flower", name:"桃園橘村屋兔子與熊",        lat:24.9905,      lng:121.3134,    country:"台灣",    tags:[],               done:false },
+  { id:57, type:"flower", name:"澳洲綠巨人浩克",            lat:-31.9412,     lng:115.8484,    country:"澳洲",    tags:[],               done:false },
+  { id:58, type:"flower", name:"日本野邊山車站雪景",        lat:35.9553,      lng:138.4744,    country:"日本",    tags:[],               done:false },
+  { id:59, type:"flower", name:"日本富士之櫻",              lat:35.4422,      lng:138.6029,    country:"日本",    tags:[],               done:false },
+  { id:60, type:"flower", name:"埃及金字塔",                lat:29.9723,      lng:31.1285,     country:"埃及",    tags:[],               done:false },
+  { id:61, type:"flower", name:"冰島黑教堂",                lat:64.8214,      lng:-23.3857,    country:"冰島",    tags:[],               done:false },
+  { id:62, type:"flower", name:"希臘無頭人",                lat:37.9055,      lng:22.8788,     country:"希臘",    tags:[],               done:false },
+  { id:63, type:"flower", name:"日本宇賀神社",              lat:34.9764,      lng:135.7633,    country:"日本",    tags:[],               done:false },
+  { id:64, type:"flower", name:"淡路島公園蠟筆小新",        lat:34.5743,      lng:135.0049,    country:"日本",    tags:[],               done:false },
+  { id:65, type:"flower", name:"德國龍城堡Schiller",        lat:50.6685,      lng:7.2067,      country:"德國",    tags:[],               done:false },
+  { id:66, type:"flower", name:"復活節島摩艾",              lat:-27.1151,     lng:-109.3947,   country:"復活節島", tags:[],              done:false },
+  { id:67, type:"flower", name:"台北101建築夜景",           lat:25.0391,      lng:121.5602,    country:"台灣",    tags:[],               done:false },
+  { id:68, type:"flower", name:"富士山夜景",                lat:35.021968,    lng:138.478161,  country:"日本",    tags:[],               done:false },
+  { id:69, type:"flower", name:"吉伊卡哇",                  lat:34.706095,    lng:135.498400,  country:"日本",    tags:[],               done:false },
+  { id:70, type:"flower", name:"倫敦眼",                    lat:51.503330,    lng:-0.119407,   country:"英國",    tags:[],               done:false },
+  { id:71, type:"flower", name:"貓咪紅牆",                  lat:-34.652406,   lng:-59.441565,  country:"",        tags:[],               done:false },
+  { id:72, type:"flower", name:"貓咪咖啡",                  lat:-25.2781970,  lng:-57.5988540, country:"",        tags:[],               done:false },
+  { id:73, type:"flower", name:"階段天空橋",                lat:34.513303,    lng:134.869103,  country:"日本",    tags:[],               done:false },
+  { id:74, type:"flower", name:"MOOMIN",                    lat:37.656986,    lng:126.668483,  country:"韓國",    tags:[],               done:false },
+  { id:75, type:"flower", name:"瓶中花",                    lat:52.4183240,   lng:4.6207560,   country:"荷蘭",    tags:[],               done:false },
+  { id:76, type:"flower", name:"城堡及月亮",                lat:45.1182420,   lng:21.3013720,  country:"",        tags:[],               done:false },
+  { id:77, type:"flower", name:"南韓poppy花海",             lat:37.513413,    lng:127.125983,  country:"韓國",    tags:[],               done:false },
+  { id:78, type:"flower", name:"倒映花",                    lat:35.080106,    lng:136.704872,  country:"日本",    tags:[],               done:false },
+  { id:79, type:"flower", name:"熊本夕陽燈",                lat:32.704029,    lng:130.581201,  country:"日本",    tags:[],               done:false },
+  { id:80, type:"flower", name:"日本皮克敏",                lat:34.6682480,   lng:135.4304740, country:"日本",    tags:[],               done:false },
+  { id:81, type:"flower", name:"高雄豆豆龍",                lat:22.657294,    lng:120.275778,  country:"台灣",    tags:[],               done:false },
 ];
 
-let spots = [];
+let spots = JSON.parse(JSON.stringify(defaultSpots));
 let filter = "all";
-let nextId = 7;
+let nextId = 82;
 
+// 從 localStorage 載入已勾選狀態（只合併 done 狀態，不覆蓋座標）
 function load() {
   try {
-    const d = localStorage.getItem("pikmin_spots");
-    spots = d ? JSON.parse(d) : defaultSpots;
-    const n = localStorage.getItem("pikmin_nextid");
-    nextId = n ? Number(n) : 7;
-  } catch { spots = defaultSpots; }
+    const saved = localStorage.getItem("pikmin_v2");
+    if (saved) {
+      const savedSpots = JSON.parse(saved);
+      // 合併已儲存的 done 狀態到 defaultSpots
+      const doneMap = {};
+      savedSpots.forEach(s => { doneMap[s.id] = s.done; });
+      spots = spots.map(s => ({ ...s, done: doneMap[s.id] !== undefined ? doneMap[s.id] : false }));
+      // 加入使用者自行新增的（id >= 82）
+      const extra = savedSpots.filter(s => s.id >= 82);
+      spots = [...spots, ...extra];
+      nextId = Math.max(82, ...spots.map(s => s.id)) + 1;
+    }
+  } catch(e) { console.log(e); }
 }
 
 function save() {
-  localStorage.setItem("pikmin_spots", JSON.stringify(spots));
-  localStorage.setItem("pikmin_nextid", String(nextId));
+  localStorage.setItem("pikmin_v2", JSON.stringify(spots));
 }
 
 function setFilter(f) {
@@ -148,48 +1070,36 @@ function toggle(id) {
   save(); render();
 }
 
-function addSpot() {
-  const name = document.getElementById("in-name").value.trim();
-  const type = document.getElementById("in-type").value;
-  const lat = parseFloat(document.getElementById("in-lat").value);
-  const lng = parseFloat(document.getElementById("in-lng").value);
-  const country = document.getElementById("in-country").value.trim();
-  const tagsRaw = document.getElementById("in-tags").value.trim();
-  if (!lat || !lng) return alert("請填寫緯度和經度");
-  const tags = tagsRaw ? tagsRaw.split(/\s+/) : [];
-  spots.push({ id: nextId++, type, name, lat, lng, country, tags, done: false });
+function bulkAdd() {
+  const raw = document.getElementById("in-bulk").value.trim();
+  if (!raw) return alert("請貼上座標內容");
+  const defaultType = document.getElementById("in-default-type").value;
+  const lines = raw.split(/\n/).map(l => l.trim()).filter(l => l);
+  const coordReg = /(-?\d+\.?\d*)\s*[,，]\s*(-?\d+\.?\d*)/;
+  let added = 0;
+  lines.forEach(line => {
+    const m = line.match(coordReg);
+    if (!m) return;
+    const lat = parseFloat(m[1]);
+    const lng = parseFloat(m[2]);
+    let type = defaultType;
+    if (line.includes("🍄")) type = "mush";
+    else if (line.includes("🌹")) type = "flower";
+    let name = line
+      .replace(coordReg, "")
+      .replace(/[🍄🌹*#\(\)（）\[\]]/g, "")
+      .replace(/\s+/g, " ")
+      .trim();
+    let country = "";
+    COUNTRIES.forEach(c => { if (name.includes(c)) country = c; });
+    spots.push({ id: nextId++, type, name, lat, lng, country, tags:[], done:false });
+    added++;
+  });
+  if (added === 0) return alert("找不到有效的座標，請確認格式");
   save(); render();
-  ["in-name","in-lat","in-lng","in-country","in-tags"].forEach(id => document.getElementById(id).value = "");
-}
-
-function render() {
-  const mushSpots = spots.filter(s => s.type==="mush" && matchFilter(s));
-  const flowerSpots = spots.filter(s => s.type==="flower" && matchFilter(s));
-
-  // Stats
-  document.getElementById("stat-mush").textContent = spots.filter(s=>s.type==="mush").length;
-  document.getElementById("stat-flower").textContent = spots.filter(s=>s.type==="flower").length;
-  document.getElementById("stat-done").textContent = spots.filter(s=>s.done).length;
-
-  let html = "";
-
-  if (filter==="all" || filter==="mush" || filter==="done" || filter==="undone") {
-    if (mushSpots.length) {
-      html += `<div class="section-title mush">🍄 菇點（${mushSpots.length}）</div>`;
-      mushSpots.forEach(s => html += cardHTML(s));
-    }
-  }
-  if (filter==="all" || filter==="flower" || filter==="done" || filter==="undone") {
-    if (flowerSpots.length) {
-      html += `<div class="section-title flower">🌹 花點（${flowerSpots.length}）</div>`;
-      flowerSpots.forEach(s => html += cardHTML(s));
-    }
-  }
-  if (!mushSpots.length && !flowerSpots.length) {
-    html = `<div class="empty">沒有符合的座標</div>`;
-  }
-
-  document.getElementById("list").innerHTML = html;
+  document.getElementById("in-bulk").value = "";
+  document.getElementById("parse-preview").textContent = `✅ 成功新增 ${added} 筆座標！`;
+  setTimeout(() => { document.getElementById("parse-preview").textContent = ""; }, 3000);
 }
 
 function matchFilter(s) {
@@ -198,6 +1108,27 @@ function matchFilter(s) {
   if (filter==="mush") return s.type==="mush";
   if (filter==="flower") return s.type==="flower";
   return true;
+}
+
+function render() {
+  const mushSpots = spots.filter(s => s.type==="mush" && matchFilter(s));
+  const flowerSpots = spots.filter(s => s.type==="flower" && matchFilter(s));
+  document.getElementById("stat-mush").textContent = spots.filter(s=>s.type==="mush").length;
+  document.getElementById("stat-flower").textContent = spots.filter(s=>s.type==="flower").length;
+  document.getElementById("stat-done").textContent = spots.filter(s=>s.done).length;
+  let html = "";
+  if (mushSpots.length) {
+    html += `<div class="section-title mush">🍄 菇點（${mushSpots.length}）</div>`;
+    mushSpots.forEach(s => html += cardHTML(s));
+  }
+  if (flowerSpots.length) {
+    html += `<div class="section-title flower">🌹 花點（${flowerSpots.length}）</div>`;
+    flowerSpots.forEach(s => html += cardHTML(s));
+  }
+  if (!mushSpots.length && !flowerSpots.length) {
+    html = `<div class="empty">沒有符合的座標</div>`;
+  }
+  document.getElementById("list").innerHTML = html;
 }
 
 function cardHTML(s) {
@@ -219,5 +1150,6 @@ function cardHTML(s) {
 
 load(); render();
 </script>
-</body>
-</html>
+
+
+</body></html>
